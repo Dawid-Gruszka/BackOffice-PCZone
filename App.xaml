@@ -1,0 +1,25 @@
+﻿<Application x:Class="BackOffice.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:BackOffice.ViewModels"
+             xmlns:local="clr-namespace:BackOffice"
+             xmlns:v="clr-namespace:BackOffice.Views"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type vm:MainViewModel}">
+                <local:MainWindow/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:ProductViewModel}">
+                <v:ProductView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:CategoryViewModel}">
+                <v:CategoryView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:OrdersViewModel}">
+                <v:OrdersView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
